@@ -1,30 +1,18 @@
 public class factory{
+    //常數final，這裡用來規定 重量=25公斤;繼承的子物件再做其他規格
+    final static int deliverWeight = 25;
     public String factoryName;
-    public float deliverWeight;
 
     // 建構子
     public factory(String factoryName){
-        //指定自己(factoryName)
+        //this指定自己(factoryName)
         this.factoryName = factoryName;
     }
-
     // 建構子
     public factory(){
         factoryName = "味全";
     }
-
-    public class getWeight(){
-        return deliverWeight = 2.28;
 }
-
-
-/**
- * TODO
- * 轉型
-**/
-
-
-
     /**
      * get and set
     **/
@@ -37,11 +25,11 @@ public class factory{
         this.factoryName = factoryName;
     }
 
-    public float getDeliverWeight() {
+    public int getDeliverWeight() {
         return deliverWeight;
     }
 
-    public void setDeliverWeight(float deliverWeight) {
+    public void setDeliverWeight(int deliverWeight) {
         this.deliverWeight = deliverWeight;
     }
 }
