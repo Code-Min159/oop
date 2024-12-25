@@ -3,7 +3,6 @@ public class subFactory extends factory{
     public float weight;
     //call father's name
 
-    //要修改的值可以在建構子這邊修改嗎?函示要到下面實作的地方才能修改?
     public subFactory(){
         this.nickName = "little momo" + super.factoryName;
     }
