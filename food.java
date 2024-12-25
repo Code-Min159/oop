@@ -1,6 +1,9 @@
 public class food{
     String name;
     int price;
+    //static ->when init the file,system will put into memory if some variable add "static" 
+    static int id = 'D10200000105';
+    
     // 建構子
     public void setFoodName(String name){
         this.name = name;
