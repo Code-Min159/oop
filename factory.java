@@ -1,5 +1,5 @@
 public class factory{
-    //常數final，這裡用來規定 重量=25公斤;繼承的子物件再做其他規格
+    //常數final，這裡用來設定 定重=25公斤;繼承的子物件再做其他規格
     final static int deliverWeight = 25;
     public String factoryName;
 
