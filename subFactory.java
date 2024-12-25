@@ -8,6 +8,9 @@ public class subFactory extends factory{
 
 }
 
+//修改定重
+public int deliveryWeight = (super.deliveryWeight+5); 
+
 //get father's method and chang the value
 public void setWeight{
     weight = 2*super.getWeight;
