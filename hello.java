@@ -18,46 +18,40 @@ public class hello {
         Human human3 = new Human("Tina", 30);
         human3.printInfo();
         //super*****
+        /*
         Person person1 = new Person();
+
         person1.getInfo();
         Person person2 = new Person(150,40);
         person2.getInfo();
         Person person3 = new Person(180, 75, "orange");
         person3.getInfo();
-
+        */
 
         //呼叫父類別
-        Animal animal = new Animal("test");
+        //Animal animal = new Animal("test"); //Animal改為抽象，不能實作
         // call sub1
         Cat catA = new Cat("small");
         Cat catB = new Cat();
-        //改寫父類別的getName()方法
-        System.out.println("catB :" + catB.getName());
+        //改寫父類別的方法
+        catB.setNunber(2);
         // call sub2
         orangeCat cat2 = new orangeCat();
         orangeCat cat3 = new orangeCat("pink cat");
 
         //多型，指同一個行為，但有不同的結果*******
-        Person person = new Person();
+        //Person person = new Person();
         Dog dog = new Dog();
         Cat cat = new Cat();
 
-        move(person);
+        //move(person);
         move(dog);
         move(cat);
 
 
-
-
-        // call private var ----OK
-        System.out.println("call animal.getNumber() = " +animal.getNumber());
-
-        // give something to try how to use private var
-        animal.setNunber(20);
-
         //call 建構子方法
         List<Animal> animalList = new ArrayList<Animal>();
-        animalList.add(new Animal("test"));
+        //animalList.add(new Person("test"));
         animalList.add(new Cat("outSideCat"));
         for(int i = 0; i<animalList.size(); i++){
             try {

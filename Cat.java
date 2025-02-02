@@ -9,14 +9,10 @@ public class Cat extends Animal {
     //子類別自己的
     private String name = "Big Cat"; //如果CAT沒有設定name， name都是繼承父類別- animal
 
-    public void move(){
-        System.out.println("jump///");
 
-    }
     //建構子1
     public Cat(){
         System.out.println("this is Cat");
-
     }
     //建構子2
     public Cat(String name){
@@ -30,13 +26,64 @@ public class Cat extends Animal {
         //因為無法找到父類別「沒有引數的建構元」。
         //https://ithelp.ithome.com.tw/m/articles/10184925
     }
-    //Override 複寫父類別的方法-->getName
+    //建構子2
+    public Cat(int h,int w){
+
+        System.out.println("this is Cat(int h,int w)");
+    }
+    @Override
+    public String Animal(String name){
+        setName(name);
+        return name;
+    }
+    @Override
+    public void Animal(){
+        this.height = -1;
+        this.witght = -1;
+        System.out.println("this is Animal in Cat");
+    }
+    @Override
+    public void Animal(int h,int w){
+        this.height = h;
+        this.witght = w;
+        totlePeople++;
+    }
+    @Override
+    public void  Animal(int h){
+        this.height = h;
+        this.witght = -1;
+        totlePeople++;
+    }
+    @Override
+    public void move(){
+        System.out.println("jump///");
+    }
+    @Override
+    public String Info(){
+        String msg = "身高: " + height + "體重: " + witght ;
+        return msg;
+    }
+    @Override
     public String getName(){
         return this.name;
     }
-
+    @Override
+    public String setName(String str){
+        this.name = str;
+        return str;
+    }
+    @Override
     protected void sleep(){
         System.out.println("go sleep");
+    }
+    @Override
+    public int getNumber(){
+        return this.number;
+    }
+    @Override //複寫父類別的方法
+    public void setNunber(int n){
+        this.number = number * n;
+        System.out.println(this.number);
     }
 
 }
